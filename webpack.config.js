@@ -10,7 +10,19 @@ module.exports = {
   },
   module: {
     rules: [
-      { test: /\.css$/, use: [
+      {
+        test: /\.(png|jpg|gif)$/i,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: true,
+            },
+          },
+        ],
+      },
+      {
+        test: /\.css$/, use: [
           {
             loader: 'css-loader',
             options: { import: true, url: true }
