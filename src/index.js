@@ -1,4 +1,3 @@
-require('./assets/bootstrap.min.css')
 require('./assets/font-awesome.css')
 require('./assets/es6-promise.min.js')
 require('./assets/es6-promise.auto.min.js')
