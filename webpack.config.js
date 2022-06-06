@@ -6,7 +6,7 @@ module.exports = {
     main: './src/index.js'
   },
   output: {
-    uniqueName: "angular13",
+    uniqueName: "dashboard",
     publicPath: "auto"
   },
   plugins: [
