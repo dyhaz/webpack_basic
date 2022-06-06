@@ -1,4 +1,5 @@
 const path = require('path');
+const module_federation = require('module-federation-plugin')
 
 module.exports = {
   entry: {
@@ -7,6 +8,18 @@ module.exports = {
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
+  },
+  plugins: [
+    new module_federation.ModuleFederationPlugin({
+      library: { type: "commonjs" },
+      filename: "remoteEntry.js",
+    }),
+  ],
+  optimization: {
+    runtimeChunk: false
+  },
+  experiments: {
+    outputModule: true
   },
   module: {
     rules: [

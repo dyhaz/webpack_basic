@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "css-loader": "6.7.1",
+    "module-federation-plugin": "^0.8.4",
     "ts-loader": "9.3.0",
     "url-loader": "4.1.1",
     "webpack": "5.73.0",
