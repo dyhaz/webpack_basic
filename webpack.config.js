@@ -1,5 +1,6 @@
 const path = require('path');
 const module_federation = require('module-federation-plugin')
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: {
@@ -10,6 +11,11 @@ module.exports = {
     publicPath: "auto"
   },
   plugins: [
+    new CopyPlugin({
+      patterns: [
+        { from: "src/assets", to: "assets" }
+      ],
+    }),
     new module_federation.ModuleFederationPlugin({
       library: { type: "commonjs" },
       filename: "remoteEntry.js",
@@ -23,17 +29,6 @@ module.exports = {
   },
   module: {
     rules: [
-      {
-        test: /\.(png|jpg|gif)$/i,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: true,
-            },
-          },
-        ],
-      },
       {
         test: /\.css$/, use: [
           {

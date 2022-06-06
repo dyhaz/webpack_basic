@@ -6,7 +6,9 @@
   "dependencies": {},
   "devDependencies": {
     "@svgr/webpack": "^6.2.1",
+    "copy-webpack-plugin": "^11.0.0",
     "css-loader": "6.7.1",
+    "file-loader": "6.2.0",
     "module-federation-plugin": "^0.8.4",
     "ts-loader": "9.3.0",
     "url-loader": "4.1.1",
