@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
+    "@svgr/webpack": "^6.2.1",
     "css-loader": "6.7.1",
     "module-federation-plugin": "^0.8.4",
     "ts-loader": "9.3.0",
