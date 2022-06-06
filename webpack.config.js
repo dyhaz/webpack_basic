@@ -13,7 +13,15 @@ module.exports = {
   plugins: [
     new CopyPlugin({
       patterns: [
-        { from: "src/assets", to: "assets" }
+        {
+          from: "src/assets",
+          to: "assets",
+          globOptions: {
+            dot: true,
+            gitignore: true,
+            ignore: ["**/*.jpg"],
+          },
+        }
       ],
     }),
     new module_federation.ModuleFederationPlugin({
@@ -29,6 +37,14 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.(js)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },
       {
         test: /\.css$/, use: [
           {
