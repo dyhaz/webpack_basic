@@ -6,8 +6,8 @@ module.exports = {
     main: './src/index.js'
   },
   output: {
-    filename: 'main.js',
-    path: path.resolve(__dirname, 'dist'),
+    uniqueName: "angular13",
+    publicPath: "auto"
   },
   plugins: [
     new module_federation.ModuleFederationPlugin({
